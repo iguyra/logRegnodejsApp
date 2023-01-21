@@ -11,7 +11,6 @@ const register = () => {
   const [inputField, setInputField] = useState({
     fullName: "",
     email: "",
-
     password: "",
     passwordConfirm: "",
   });

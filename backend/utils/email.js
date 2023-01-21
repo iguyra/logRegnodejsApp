@@ -11,17 +11,7 @@ const sendEmail = async (options) => {
       user: "xxxxx@gmail.com",
       pass: "xxxxx",
     },
-
-    //ACTIVATE IN GMAIL /'LESS SECURE APP" OPTION
   });
-
-  // const transporter = nodemailer.createTransport({
-  //   host: process.env.EMAIL_HOST,
-  //   port: process.env.EMAIL_PORT,
-  //   auth: {
-  //     user: process.env.EMAIL_USERNAME,
-  //     pass: process.env.EMAIL_PASSWORD,
-  //   },
 
   //   //ACTIVATE IN GMAIL /'LESS SECURE APP" OPTION
   // });
@@ -33,12 +23,6 @@ const sendEmail = async (options) => {
     subject: options.subject,
     text: options.message,
     html: options.html,
-    // html: `<p>VERIFY YOUR EMAIL</p>
-    // <h3>Contact Details</h3>
-    // <ul>
-    //   <li>TO: ${options.clientEmail}</li>
-    //   <li>Message: ${options.message}</li>
-    // </ul> `,
   };
 
   // 3) actually send the email with nodemailer
