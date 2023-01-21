@@ -27,12 +27,9 @@ const forgotPassword = () => {
       setIsSubmitted(false);
       setIsSubmitting(true);
       setIsError(false);
-      const { data } = await axios.patch(
-        `${URLbaseAPI}/api/users/forgotPassword`,
-        {
-          email: inputField.email,
-        }
-      );
+      const { data } = await axios.patch(`/api/users/forgotPassword`, {
+        email: inputField.email,
+      });
 
       setIsLogged(true);
       setIsSubmitting(false);

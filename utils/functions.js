@@ -1,14 +1,13 @@
 import axios from "axios";
-import URLbaseAPI from "../utils/URLbaseAPI";
 
 export const getMyBacc = async () => {
-  const { data } = await axios.get(`${URLbaseAPI}/api/users/getMyBacc`);
+  const { data } = await axios.get(`/api/users/getMyBacc`);
 
   return data;
 };
 
 export const getUser = async () => {
-  const { data } = await axios.get(`${URLbaseAPI}/api/users/getMe`);
+  const { data } = await axios.get(`/api/users/getMe`);
 
   return data;
 };

@@ -26,13 +26,10 @@ const login = () => {
     try {
       setIsLogging(true);
       setIsError(false);
-      const { data } = await axios.post(
-        `${URLbaseAPI}/api/users/resetPassword`,
-        {
-          newPassword: inputField.newPassword,
-          confirmNewPassword: inputField.confirmNewPassword,
-        }
-      );
+      const { data } = await axios.post(`/api/users/resetPassword`, {
+        newPassword: inputField.newPassword,
+        confirmNewPassword: inputField.confirmNewPassword,
+      });
 
       setIsLogged(true);
       Router.push("/dashboard");

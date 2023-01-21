@@ -34,7 +34,7 @@ const register = () => {
     try {
       setIsLogging(true);
       setIsError(false);
-      const { data } = await axios.post(`${URLbaseAPI}/api/users/signup`, {
+      const { data } = await axios.post(`/api/users/signup`, {
         fullName: inputField.fullName,
         email: inputField.email,
         password: inputField.password,

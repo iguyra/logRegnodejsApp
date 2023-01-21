@@ -2,7 +2,6 @@ import { useState } from "react";
 import Form from "../components/Form";
 import Layout from "../components/Layout";
 import axios from "axios";
-import URLbaseAPI from "../utils/URLbaseAPI";
 import { redirectAuthUser } from "../utils/functions";
 import Loader from "../components/Loader/Loader";
 
@@ -28,7 +27,7 @@ const login = () => {
     try {
       setIsLogging(true);
       setIsError(false);
-      const { data } = await axios.post(`${URLbaseAPI}/api/users/login`, {
+      const { data } = await axios.post(`/api/users/login`, {
         email: inputField.email,
         password: inputField.password,
       });
